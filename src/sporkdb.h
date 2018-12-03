@@ -2,8 +2,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef APR COIN_CSPORKDB_H
-#define APR COIN_CSPORKDB_H
+#ifndef APRCOIN_CSPORKDB_H
+#define APRCOIN_CSPORKDB_H
 
 #include <boost/filesystem/path.hpp>
 #include "leveldbwrapper.h"
@@ -25,4 +25,4 @@ public:
 };
 
 
-#endif //APR COIN_CSPORKDB_H
+#endif
