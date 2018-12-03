@@ -8,7 +8,7 @@
 #include "utilstrencodings.h"
 #include "script/standard.h"
 
-#include <arpa/inet.h>
+//#include <arpa/inet.h>
 
 namespace {
 inline std::string ValueString(const std::vector<unsigned char>& vch)
