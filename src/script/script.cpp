@@ -8,7 +8,11 @@
 #include "utilstrencodings.h"
 #include "script/standard.h"
 
+#ifdef WIN32
+#include <winsock2.h> // for Windows API
+#else
 #include <arpa/inet.h>
+#endif
 
 namespace {
 inline std::string ValueString(const std::vector<unsigned char>& vch)
