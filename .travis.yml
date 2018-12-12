@@ -68,7 +68,7 @@ after_script:
   - echo $TRAVIS_COMMIT_RANGE
   - echo $TRAVIS_COMMIT_LOG
 before_deploy:
-  - if [ "$HOST" == "x86_64-apple-darwin14" ]; then APR-Coin-Core.dmg APR-Coin-Core-$TAG-macosx-generic.dmg; FILE=APR-Coin-Core-$TAG-macosx-generic.dmg; else HERE=$(pwd); cd $OUTDIR; zip -r $HERE/apr-$TAG-$HOST.zip bin/; cd $HERE; FILE="apr-$TAG-$HOST.zip"; fi
+  - if [ "$HOST" == "x86_64-apple-darwin14" ]; then mv APR-Coin-Core.dmg APR-Coin-Core-$TAG-macosx-generic.dmg; FILE=APR-Coin-Core-$TAG-macosx-generic.dmg; else HERE=$(pwd); cd $OUTDIR; zip -r $HERE/apr-$TAG-$HOST.zip bin/; cd $HERE; FILE="apr-$TAG-$HOST.zip"; fi
   - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
 deploy:
   provider: releases
